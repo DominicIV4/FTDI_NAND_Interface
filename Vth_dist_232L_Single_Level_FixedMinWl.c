@@ -1529,8 +1529,9 @@ int main(int argc, char **argv)
     // main function
     // single level test target
     int target_level = 6; // change this to sweep a different level (1-7)
-    unsigned int target_WL = 929;
-    { // brackets for potential future loop of multiple tests
+    unsigned int target_WL = 0; // target WL to sweep on
+
+    for (unsigned int target_WL = 10; target_WL < 929; target_WL = target_WL){ // loop over 
 
         // define variables for page program
         unsigned char page_data[SIZE];
